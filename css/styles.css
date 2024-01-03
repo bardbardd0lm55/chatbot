@@ -22,10 +22,14 @@ html, body, [class*="css"]{
     font-family: 'Poppins', sans-serif !important;
 }
 
-#chat-input-area{
+element-container st-emotion-cache-ls01ki e1f1d6gn4{
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 9999999999;
-    background: #272652;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px;
 }
