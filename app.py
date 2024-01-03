@@ -59,4 +59,4 @@ for message in st.session_state.history:
 st.text_input("What are you looking for? ", key="user_input", on_change=send_message, value="")
 
 #Display the footer/credit
-st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
+st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4" id="credit-area">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
