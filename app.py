@@ -10,7 +10,7 @@ st.image(logo_url, width=500)  # You can adjust the width as needed
 
 # Initialize the OpenAI client
 openai = OpenAI(
-    api_key="f4ecGoMrx7f21kaV2rIdJNfWQWt8ZPZq",
+    api_key="API_KEY_",
     base_url="https://api.deepinfra.com/v1/openai"
 )
 
