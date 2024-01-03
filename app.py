@@ -56,11 +56,9 @@ for message in st.session_state.history:
     st.markdown(f"**{message['role'].title()}**: {message['content']}")
 
 # Input box and Send button at the bottom in main area
-st.markdown('<div id="chat-input-area" class="w-100"><div class="container"><div class="row"><div class="col-md-4"></div><div class="col-md-4">', unsafe_allow_html= True)
-
 st.text_input("What are you looking for? ", key="user_input", on_change=send_message, value="")
-
-st.markdown('</div><div class="col-md-4"></div></div></div></div>', unsafe_allow_html= True)
 
 #Display the footer/credit
 st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4" id="credit-area">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
+
+st.markdown('<script>setInterval(function(){ console.log(window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")); }, 3000)</script>', unsafe_allow_html= True)
