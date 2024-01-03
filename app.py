@@ -2,6 +2,8 @@ from openai import OpenAI
 import streamlit as st
 from streamlit_javascript import st_javascript
 
+API_KEY_ = 'ABCD'
+
 #Custom css for components styling
 with open('css/styles.css') as f:
   st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
