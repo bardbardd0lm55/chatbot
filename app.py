@@ -56,6 +56,8 @@ for message in st.session_state.history:
     st.markdown(f"**{message['role'].title()}**: {message['content']}")
 
 # Input box and Send button at the bottom in main area
+st.markdown('<div id="chat-input-area" class="w-100"><div class="container"><div class="row"><div class="col-md-4"></div><div class="col-md-4">Hello</div><div class="col-md-4"></div></div></div></div>', unsafe_allow_html= True)
+
 st.text_input("What are you looking for? ", key="user_input", on_change=send_message, value="")
 
 #Display the footer/credit

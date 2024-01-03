@@ -12,7 +12,7 @@ html, body, [class*="css"]{
   font-family: 'Poppins', sans-serif !important;
 }
 
-.st-emotion-cache-q8sbsg e1nzilvr5{
+.st-emotion-cache-q8sbsg{
     width: 100%;
     text-align: center;
     font-family: 'Poppins', sans-serif !important;
@@ -20,4 +20,12 @@ html, body, [class*="css"]{
 
 #credit-area{
     font-family: 'Poppins', sans-serif !important;
+}
+
+#chat-input-area{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999999;
+    background: #272652;
 }
