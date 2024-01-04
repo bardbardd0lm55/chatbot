@@ -20,6 +20,8 @@ if st_theme == "dark":
 else:
   st.markdown('<h1 class="text-center"><img src="'+black_logo_url+'" height="60px"></h1>', unsafe_allow_html= True)
 
+st.markdown('<p style="font-size: 12px; color: #666;" class="text-center" id="tagline-area">Where Privacy Meets Productivity in Legal Tech</p>', unsafe_allow_html= True)
+
 # Initialize the OpenAI client
 openai = OpenAI(
     api_key=API_KEY_,
@@ -50,13 +52,20 @@ if 'history' not in st.session_state:
 if 'user_input' not in st.session_state:
     st.session_state['user_input'] = ""
 
+chat_container = st.container(border=True)
+
 # Display conversation history in main area
 for message in st.session_state.history:
     # Using Markdown for message content
-    st.markdown(f"**{message['role'].title()}**: {message['content']}")
+    content = f"**{message['role'].title()}**: {message['content']}"
+    content = content.replace('User', '🧑🏻')
+    content = content.replace('Assistant', '🤖')
+    content = content.replace(': ', ' ')
+    
+    chat_container.markdown(content)
 
 # Input box and Send button at the bottom in main area
-st.text_input("What are you looking for? ", key="user_input", on_change=send_message, value="")
+st.text_input("", key="user_input", on_change=send_message, value="", placeholder="What are you looking for?")
 
 #Display the footer/credit
-st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
+st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4" id="credit-area">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
