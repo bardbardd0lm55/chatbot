@@ -20,6 +20,8 @@ if st_theme == "dark":
 else:
   st.markdown('<h1 class="text-center"><img src="'+black_logo_url+'" height="60px"></h1>', unsafe_allow_html= True)
 
+st.markdown('<p style="font-size: 12px; color: #666;" class="text-center" id="tagline-area">Where Privacy Meets Productivity in Legal Tech!</p>', unsafe_allow_html= True)
+
 # Initialize the OpenAI client
 openai = OpenAI(
     api_key=API_KEY_,
@@ -58,7 +60,7 @@ for message in st.session_state.history:
     content = f"**{message['role'].title()}**: {message['content']}"
     content = content.replace('User', '🧑🏻')
     content = content.replace('Assistant', '💬')
-    content = content.replace(': ', '')
+    content = content.replace(': ', ' ')
     
     chat_container.markdown(content)
 
@@ -67,5 +69,3 @@ st.text_input("", key="user_input", on_change=send_message, value="", placeholde
 
 #Display the footer/credit
 st.markdown('<p style="font-size: 12px; color: #666;" class="text-center mt-5 mb-4" id="credit-area">LawyerChat v0.1.2<br>All Rights Reserved © LawyerChat 2024</p>', unsafe_allow_html= True)
-
-st.markdown('<script>setInterval(function(){ console.log(window.getComputedStyle(window.parent.document.getElementsByClassName("stApp")[0]).getPropertyValue("color-scheme")); }, 3000)</script>', unsafe_allow_html= True)

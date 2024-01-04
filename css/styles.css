@@ -22,6 +22,10 @@ html, body, [class*="css"]{
     font-family: 'Poppins', sans-serif !important;
 }
 
+#tagline-area{
+    font-family: 'Poppins', sans-serif !important;
+}
+
 #credit-area{
     font-family: 'Poppins', sans-serif !important;
 }
