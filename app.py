@@ -56,8 +56,8 @@ chat_container = st.container(border=True)
 for message in st.session_state.history:
     # Using Markdown for message content
     content = f"**{message['role'].title()}**: {message['content']}"
-    content = content.replace('User:', '![user](https://lawyerchat.tech/wp-content/uploads/2024/01/lw-user-40.png)<br>')
-    content = content.replace('Assistant:', '![chatbot](https://lawyerchat.tech/wp-content/uploads/2024/01/lw-chat-40.png)<br>')
+    content = content.replace('User', '![user](https://lawyerchat.tech/wp-content/uploads/2024/01/lw-user-40.png)<br>')
+    content = content.replace('Assistant', '![chatbot](https://lawyerchat.tech/wp-content/uploads/2024/01/lw-chat-40.png)<br>')
     chat_container.markdown(content)
 
 # Input box and Send button at the bottom in main area
