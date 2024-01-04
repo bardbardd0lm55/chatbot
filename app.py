@@ -20,7 +20,7 @@ if st_theme == "dark":
 else:
   st.markdown('<h1 class="text-center"><img src="'+black_logo_url+'" height="60px"></h1>', unsafe_allow_html= True)
 
-st.markdown('<p style="font-size: 12px; color: #666;" class="text-center" id="tagline-area">Where Privacy Meets Productivity in Legal Tech!</p>', unsafe_allow_html= True)
+st.markdown('<p style="font-size: 12px; color: #666;" class="text-center" id="tagline-area">Where Privacy Meets Productivity in Legal Tech</p>', unsafe_allow_html= True)
 
 # Initialize the OpenAI client
 openai = OpenAI(
@@ -59,7 +59,7 @@ for message in st.session_state.history:
     # Using Markdown for message content
     content = f"**{message['role'].title()}**: {message['content']}"
     content = content.replace('User', '🧑🏻')
-    content = content.replace('Assistant', '💬')
+    content = content.replace('Assistant', '🤖')
     content = content.replace(': ', ' ')
     
     chat_container.markdown(content)
