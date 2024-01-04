@@ -54,7 +54,8 @@ if 'user_input' not in st.session_state:
 for message in st.session_state.history:
     # Using Markdown for message content
     content = f"**{message['role'].title()}**: {message['content']}"
-    st.markdown(content.replace("Assistant", "LawyerChat"))
+    content = content.replace('Assistant', '<img src="https://lawyerchat.tech/wp-content/uploads/2024/01/lw-cht-round.png" height="20px">')
+    st.markdown(content)
 
 # Input box and Send button at the bottom in main area
 st.text_input("", key="user_input", on_change=send_message, value="", placeholder="What are you looking for?")
