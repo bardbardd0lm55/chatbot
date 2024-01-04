@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_javascript import st_javascript
 import os
 #API_KEY_ = os.environ.get("API_KEY_")
-API_KEY_ = "ABCD"
+API_KEY_ = "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"
 
 #Custom css for components styling
 with open('css/styles.css') as f:
@@ -54,7 +54,8 @@ if 'user_input' not in st.session_state:
 # Display conversation history in main area
 for message in st.session_state.history:
     # Using Markdown for message content
-    st.markdown(f"**{message['role'].title()}**: {message['content']}")
+    content = f"**{message['role'].title()}**: {message['content']}"
+    st.markdown(content.replace("Assistant", "LawyerChat"))
 
 # Input box and Send button at the bottom in main area
 st.text_input("", key="user_input", on_change=send_message, value="", placeholder="What are you looking for?")
