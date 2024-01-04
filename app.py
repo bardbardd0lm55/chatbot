@@ -4,8 +4,6 @@ from streamlit_javascript import st_javascript
 import os
 API_KEY_ = os.environ.get("API_KEY_")
 
-API_KEY_ = 'ABCD'
-
 #Custom css for components styling
 with open('css/styles.css') as f:
   st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
