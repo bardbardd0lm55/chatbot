@@ -50,12 +50,15 @@ if 'history' not in st.session_state:
 if 'user_input' not in st.session_state:
     st.session_state['user_input'] = ""
 
+chat_container = st.container(border=True)
+
 # Display conversation history in main area
 for message in st.session_state.history:
     # Using Markdown for message content
     content = f"**{message['role'].title()}**: {message['content']}"
-    content = content.replace('Assistant', '<img src="https://lawyerchat.tech/wp-content/uploads/2024/01/lw-cht-round.png" height="20px">')
-    st.markdown(content)
+    content = content.replace('User', '🧑🏻')
+    content = content.replace('Assistant', '![chatbot](https://lawyerchat.tech/wp-content/uploads/2024/01/lw-cht-round.png)')
+    chat_container.markdown(content)
 
 # Input box and Send button at the bottom in main area
 st.text_input("", key="user_input", on_change=send_message, value="", placeholder="What are you looking for?")
