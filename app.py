@@ -2,8 +2,7 @@ from openai import OpenAI
 import streamlit as st
 from streamlit_javascript import st_javascript
 import os
-#API_KEY_ = os.environ.get("API_KEY_")
-API_KEY_ = "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"
+API_KEY_ = os.environ.get("API_KEY_")
 
 #Custom css for components styling
 with open('css/styles.css') as f:
